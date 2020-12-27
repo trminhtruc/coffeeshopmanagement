@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Nhom16DeTaiQuanLyCaffe">
+		<provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
+		<class>entities.MonAnUong</class>
+		<class>entities.HoaDon</class>
+		<class>entities.TaiKhoan</class>
+		<class>entities.NhanVien</class>
+		<class>entities.ChiTietHoaDon</class>
+
+
+
+		<properties>
+			<property name="hibernate.ogm.datastore.provider"
+				value="org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider" />
+			<property name="hibernate.ogm.datastore.database"
+				value="demodb" />
+			<property name="hibernate.ogm.mongodb.host"
+				value="localhost" />
+			
+			<property name="hibernate.ogm.datastore.create_database"
+				value="true" />
+			
+		</properties>
+	</persistence-unit>
+</persistence>
